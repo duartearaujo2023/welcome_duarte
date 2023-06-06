@@ -1,0 +1,564 @@
+<datapower-configuration version="3">
+    <export-details>
+        <description>Exported Configuration</description>
+        <user>e352755</user>
+        <domain>d01.gateway.corp.edp.com</domain>
+        <comment/>
+        <product-id>5725</product-id>
+        <product>IDG</product>
+        <display-product>IDG</display-product>
+        <model>IBM DataPower Gateway</model>
+        <display-model>IBM DataPower Gateway</display-model>
+        <device-name>EAISG-DEVVAP01S</device-name>
+        <serial-number>0000000</serial-number>
+        <firmware-version>IDG.10.0.1.9</firmware-version>
+        <display-firmware-version>IDG.10.0.1.9</display-firmware-version>
+        <firmware-build>344832</firmware-build>
+        <delivery-type>LTS</delivery-type>
+        <firmware-timestamp>2022/08/18 19:34:34</firmware-timestamp>
+        <current-date>2023-06-05</current-date>
+        <current-time>19:36:18 BST</current-time>
+        <reset-date>2023-04-20</reset-date>
+        <reset-time>15:13:34 BST</reset-time>
+        <login-message/>
+        <custom-ui-file/>
+    </export-details>
+    <interface-data>
+        <interface name="eth0" type="Ethernet" vers="ipv4" ip-addr="10.136.3.55"/>
+        <interface name="eth1" type="Ethernet" vers="ipv4" ip-addr="10.136.35.15"/>
+    </interface-data>
+    <configuration domain="d01.gateway.corp.edp.com">
+        <HTTPSourceProtocolHandler name="welcomeduartev1_FSH"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <LocalAddress>LocalIP</LocalAddress>
+            <LocalPort>12133</LocalPort>
+            <HTTPVersion>HTTP/1.1</HTTPVersion>
+            <AllowedFeatures>
+                <HTTP-1.0>on</HTTP-1.0>
+                <HTTP-1.1>on</HTTP-1.1>
+                <HTTP-2.0>off</HTTP-2.0>
+                <POST>off</POST>
+                <GET>on</GET>
+                <PUT>off</PUT>
+                <PATCH>off</PATCH>
+                <HEAD>off</HEAD>
+                <OPTIONS>off</OPTIONS>
+                <TRACE>off</TRACE>
+                <DELETE>off</DELETE>
+                <CONNECT>off</CONNECT>
+                <CustomMethods>off</CustomMethods>
+                <QueryString>on</QueryString>
+                <FragmentIdentifiers>on</FragmentIdentifiers>
+                <DotDot>off</DotDot>
+                <DotDotInPath>off</DotDotInPath>
+                <DotDotInQueryString>off</DotDotInQueryString>
+                <CmdExe>off</CmdExe>
+            </AllowedFeatures>
+            <PersistentConnections>on</PersistentConnections>
+            <MaxPersistentConnectionsReuse>0</MaxPersistentConnectionsReuse>
+            <AllowCompression>off</AllowCompression>
+            <AllowWebSocketUpgrade>off</AllowWebSocketUpgrade>
+            <WebSocketIdleTimeout>0</WebSocketIdleTimeout>
+            <MaxURLLen>16384</MaxURLLen>
+            <MaxTotalHdrLen>128000</MaxTotalHdrLen>
+            <MaxHdrCount>0</MaxHdrCount>
+            <MaxNameHdrLen>0</MaxNameHdrLen>
+            <MaxValueHdrLen>0</MaxValueHdrLen>
+            <MaxQueryStringLen>0</MaxQueryStringLen>
+            <CredentialCharset>protocol</CredentialCharset>
+            <HTTP2MaxStreams>100</HTTP2MaxStreams>
+            <HTTP2MaxFrameSize>16384</HTTP2MaxFrameSize>
+            <HTTP2StreamHeader>off</HTTP2StreamHeader>
+            <ChunkedEncoding>on</ChunkedEncoding>
+            <HeaderTimeout>30000</HeaderTimeout>
+        </HTTPSourceProtocolHandler>
+        <HTTPUserAgent name="default" intrinsic="true"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <UserSummary>Default User Agent</UserSummary>
+            <MaxRedirects>8</MaxRedirects>
+            <Timeout>300</Timeout>
+        </HTTPUserAgent>
+        <XMLManager name="default" intrinsic="true"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <UserSummary>Default XML-Manager</UserSummary>
+            <CacheMemorySize>2147483647</CacheMemorySize>
+            <CacheSize>256</CacheSize>
+            <SHA1Caching>on</SHA1Caching>
+            <StaticDocumentCalls>on</StaticDocumentCalls>
+            <SearchResults>on</SearchResults>
+            <Memoization>on</Memoization>
+            <ParserLimitsBytesScanned>4194304</ParserLimitsBytesScanned>
+            <ParserLimitsElementDepth>512</ParserLimitsElementDepth>
+            <ParserLimitsAttributeCount>128</ParserLimitsAttributeCount>
+            <ParserLimitsMaxNodeSize>33554432</ParserLimitsMaxNodeSize>
+            <ParserLimitsForbidExternalReferences>on</ParserLimitsForbidExternalReferences>
+            <ParserLimitsExternalReferences>forbid</ParserLimitsExternalReferences>
+            <ParserLimitsMaxPrefixes>1024</ParserLimitsMaxPrefixes>
+            <ParserLimitsMaxNamespaces>1024</ParserLimitsMaxNamespaces>
+            <ParserLimitsMaxLocalNames>60000</ParserLimitsMaxLocalNames>
+            <DocCacheMaxDocs>5000</DocCacheMaxDocs>
+            <DocCacheSize>0</DocCacheSize>
+            <DocMaxWrites>32768</DocMaxWrites>
+            <UserAgent class="HTTPUserAgent">default</UserAgent>
+        </XMLManager>
+        <Matching name="json_request"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <MatchRules>
+                <Type>http</Type>
+                <HttpTag>Content-type</HttpTag>
+                <HttpValue>application/json</HttpValue>
+                <Url/>
+                <ErrorCode/>
+                <XPATHExpression/>
+                <Method>default</Method>
+                <CustomMethod/>
+            </MatchRules>
+            <MatchWithPCRE>off</MatchWithPCRE>
+            <CombineWithOr>off</CombineWithOr>
+        </Matching>
+        <StylePolicyAction name="welcomeduartev1_GatewayStylePolicy_request_json_gatewayscript_0"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <Type>gatewayscript</Type>
+            <Input>INPUT</Input>
+            <ParseSettingsReference>
+                <URL/>
+                <Literal/>
+                <Default/>
+            </ParseSettingsReference>
+            <ParseMetricsResultType>none</ParseMetricsResultType>
+            <TransformLanguage>none</TransformLanguage>
+            <GatewayScriptLocation>local:///GatewayScript/duarte.js</GatewayScriptLocation>
+            <ActionDebug persisted="false">off</ActionDebug>
+            <Output>response</Output>
+            <NoTranscodeUtf8>off</NoTranscodeUtf8>
+            <SSLClientConfigType>proxy</SSLClientConfigType>
+            <Transactional>off</Transactional>
+            <SOAPValidation>body</SOAPValidation>
+            <SQLSourceType>static</SQLSourceType>
+            <JWSVerifyStripSignature>on</JWSVerifyStripSignature>
+            <Asynchronous>off</Asynchronous>
+            <ResultsMode>first-available</ResultsMode>
+            <RetryCount>0</RetryCount>
+            <RetryInterval>1000</RetryInterval>
+            <MultipleOutputs>off</MultipleOutputs>
+            <IteratorType>XPATH</IteratorType>
+            <Timeout>0</Timeout>
+            <MethodRewriteType>GET</MethodRewriteType>
+            <MethodType>POST</MethodType>
+            <MethodType2>POST</MethodType2>
+        </StylePolicyAction>
+        <StylePolicyAction name="welcomeduartev1_GatewayStylePolicy_request_json_setvar_0"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <Type>setvar</Type>
+            <Input>NULL</Input>
+            <ParseSettingsReference>
+                <URL/>
+                <Literal/>
+                <Default/>
+            </ParseSettingsReference>
+            <ParseMetricsResultType>none</ParseMetricsResultType>
+            <TransformLanguage>none</TransformLanguage>
+            <ActionDebug persisted="false">off</ActionDebug>
+            <NoTranscodeUtf8>off</NoTranscodeUtf8>
+            <Variable>var://service/mpgw/skip-backside</Variable>
+            <Value>1</Value>
+            <SSLClientConfigType>proxy</SSLClientConfigType>
+            <Transactional>off</Transactional>
+            <SOAPValidation>body</SOAPValidation>
+            <SQLSourceType>static</SQLSourceType>
+            <JWSVerifyStripSignature>on</JWSVerifyStripSignature>
+            <Asynchronous>off</Asynchronous>
+            <ResultsMode>first-available</ResultsMode>
+            <RetryCount>0</RetryCount>
+            <RetryInterval>1000</RetryInterval>
+            <MultipleOutputs>off</MultipleOutputs>
+            <IteratorType>XPATH</IteratorType>
+            <Timeout>0</Timeout>
+            <MethodRewriteType>GET</MethodRewriteType>
+            <MethodType>POST</MethodType>
+            <MethodType2>POST</MethodType2>
+        </StylePolicyAction>
+        <StylePolicyAction name="welcomeduartev1_GatewayStylePolicy_request_json_results_output_0"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <Type>results</Type>
+            <Input>response</Input>
+            <ParseSettingsReference>
+                <URL/>
+                <Literal/>
+                <Default/>
+            </ParseSettingsReference>
+            <ParseMetricsResultType>none</ParseMetricsResultType>
+            <TransformLanguage>none</TransformLanguage>
+            <ActionDebug persisted="false">off</ActionDebug>
+            <NoTranscodeUtf8>off</NoTranscodeUtf8>
+            <SSLClientConfigType>proxy</SSLClientConfigType>
+            <OutputType>default</OutputType>
+            <Transactional>off</Transactional>
+            <SOAPValidation>body</SOAPValidation>
+            <SQLSourceType>static</SQLSourceType>
+            <JWSVerifyStripSignature>on</JWSVerifyStripSignature>
+            <Asynchronous>off</Asynchronous>
+            <ResultsMode>first-available</ResultsMode>
+            <RetryCount>0</RetryCount>
+            <RetryInterval>1000</RetryInterval>
+            <MultipleOutputs>off</MultipleOutputs>
+            <IteratorType>XPATH</IteratorType>
+            <Timeout>0</Timeout>
+            <MethodRewriteType>GET</MethodRewriteType>
+            <MethodType>POST</MethodType>
+            <MethodType2>POST</MethodType2>
+        </StylePolicyAction>
+        <StylePolicyRule name="welcomeduartev1_GatewayStylePolicy_request_json"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <Actions class="StylePolicyAction">welcomeduartev1_GatewayStylePolicy_request_json_gatewayscript_0</Actions>
+            <Actions class="StylePolicyAction">welcomeduartev1_GatewayStylePolicy_request_json_setvar_0</Actions>
+            <Actions class="StylePolicyAction">welcomeduartev1_GatewayStylePolicy_request_json_results_output_0</Actions>
+            <Direction>request-rule</Direction>
+            <InputFormat>none</InputFormat>
+            <OutputFormat>none</OutputFormat>
+            <NonXMLProcessing>off</NonXMLProcessing>
+            <Unprocessed>off</Unprocessed>
+        </StylePolicyRule>
+        <Matching name="request_xml"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <MatchRules>
+                <Type>http</Type>
+                <HttpTag>Content-type</HttpTag>
+                <HttpValue>text/xml</HttpValue>
+                <Url/>
+                <ErrorCode/>
+                <XPATHExpression/>
+                <Method>default</Method>
+                <CustomMethod/>
+            </MatchRules>
+            <MatchRules>
+                <Type>http</Type>
+                <HttpTag>Content-type</HttpTag>
+                <HttpValue>application/xml</HttpValue>
+                <Url/>
+                <ErrorCode/>
+                <XPATHExpression/>
+                <Method>default</Method>
+                <CustomMethod/>
+            </MatchRules>
+            <MatchRules>
+                <Type>method</Type>
+                <HttpTag/>
+                <HttpValue/>
+                <Url/>
+                <ErrorCode/>
+                <XPATHExpression/>
+                <Method>GET</Method>
+                <CustomMethod/>
+            </MatchRules>
+            <MatchWithPCRE>off</MatchWithPCRE>
+            <CombineWithOr>on</CombineWithOr>
+        </Matching>
+        <StylePolicyAction name="welcomeduartev1_GatewayStylePolicy_request_xml_gatewayscript_1"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <Type>gatewayscript</Type>
+            <Input>NULL</Input>
+            <ParseSettingsReference>
+                <URL/>
+                <Literal/>
+                <Default/>
+            </ParseSettingsReference>
+            <ParseMetricsResultType>none</ParseMetricsResultType>
+            <TransformLanguage>none</TransformLanguage>
+            <GatewayScriptLocation>local:///GatewayScript/loadXML.js</GatewayScriptLocation>
+            <ActionDebug persisted="false">off</ActionDebug>
+            <Output>xml_request</Output>
+            <NoTranscodeUtf8>off</NoTranscodeUtf8>
+            <SSLClientConfigType>proxy</SSLClientConfigType>
+            <Transactional>off</Transactional>
+            <SOAPValidation>body</SOAPValidation>
+            <SQLSourceType>static</SQLSourceType>
+            <JWSVerifyStripSignature>on</JWSVerifyStripSignature>
+            <Asynchronous>off</Asynchronous>
+            <ResultsMode>first-available</ResultsMode>
+            <RetryCount>0</RetryCount>
+            <RetryInterval>1000</RetryInterval>
+            <MultipleOutputs>off</MultipleOutputs>
+            <IteratorType>XPATH</IteratorType>
+            <Timeout>0</Timeout>
+            <MethodRewriteType>GET</MethodRewriteType>
+            <MethodType>POST</MethodType>
+            <MethodType2>POST</MethodType2>
+        </StylePolicyAction>
+        <StylePolicyAction name="welcomeduartev1_GatewayStylePolicy_request_xml_xform_0"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <Type>xform</Type>
+            <Input>xml_request</Input>
+            <Transform>local:///XSLT/duarte.xsl</Transform>
+            <ParseSettingsReference>
+                <URL/>
+                <Literal/>
+                <Default/>
+            </ParseSettingsReference>
+            <ParseMetricsResultType>none</ParseMetricsResultType>
+            <TransformLanguage>none</TransformLanguage>
+            <ActionDebug persisted="false">off</ActionDebug>
+            <Output>response</Output>
+            <NoTranscodeUtf8>off</NoTranscodeUtf8>
+            <SSLClientConfigType>proxy</SSLClientConfigType>
+            <OutputType>default</OutputType>
+            <Transactional>off</Transactional>
+            <SOAPValidation>body</SOAPValidation>
+            <SQLSourceType>static</SQLSourceType>
+            <JWSVerifyStripSignature>on</JWSVerifyStripSignature>
+            <Asynchronous>off</Asynchronous>
+            <ResultsMode>first-available</ResultsMode>
+            <RetryCount>0</RetryCount>
+            <RetryInterval>1000</RetryInterval>
+            <MultipleOutputs>off</MultipleOutputs>
+            <IteratorType>XPATH</IteratorType>
+            <Timeout>0</Timeout>
+            <MethodRewriteType>GET</MethodRewriteType>
+            <MethodType>POST</MethodType>
+            <MethodType2>POST</MethodType2>
+        </StylePolicyAction>
+        <StylePolicyAction name="welcomeduartev1_GatewayStylePolicy_request_xml_setvar_0"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <Type>setvar</Type>
+            <Input>NULL</Input>
+            <ParseSettingsReference>
+                <URL/>
+                <Literal/>
+                <Default/>
+            </ParseSettingsReference>
+            <ParseMetricsResultType>none</ParseMetricsResultType>
+            <TransformLanguage>none</TransformLanguage>
+            <ActionDebug persisted="false">off</ActionDebug>
+            <NoTranscodeUtf8>off</NoTranscodeUtf8>
+            <Variable>var://service/mpgw/skip-backside</Variable>
+            <Value>1</Value>
+            <SSLClientConfigType>proxy</SSLClientConfigType>
+            <Transactional>off</Transactional>
+            <SOAPValidation>body</SOAPValidation>
+            <SQLSourceType>static</SQLSourceType>
+            <JWSVerifyStripSignature>on</JWSVerifyStripSignature>
+            <Asynchronous>off</Asynchronous>
+            <ResultsMode>first-available</ResultsMode>
+            <RetryCount>0</RetryCount>
+            <RetryInterval>1000</RetryInterval>
+            <MultipleOutputs>off</MultipleOutputs>
+            <IteratorType>XPATH</IteratorType>
+            <Timeout>0</Timeout>
+            <MethodRewriteType>GET</MethodRewriteType>
+            <MethodType>POST</MethodType>
+            <MethodType2>POST</MethodType2>
+        </StylePolicyAction>
+        <StylePolicyAction name="welcomeduartev1_GatewayStylePolicy_request_xml_results_output_0"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <Type>results</Type>
+            <Input>response</Input>
+            <ParseSettingsReference>
+                <URL/>
+                <Literal/>
+                <Default/>
+            </ParseSettingsReference>
+            <ParseMetricsResultType>none</ParseMetricsResultType>
+            <TransformLanguage>none</TransformLanguage>
+            <ActionDebug persisted="false">off</ActionDebug>
+            <NoTranscodeUtf8>off</NoTranscodeUtf8>
+            <SSLClientConfigType>proxy</SSLClientConfigType>
+            <OutputType>default</OutputType>
+            <Transactional>off</Transactional>
+            <SOAPValidation>body</SOAPValidation>
+            <SQLSourceType>static</SQLSourceType>
+            <JWSVerifyStripSignature>on</JWSVerifyStripSignature>
+            <Asynchronous>off</Asynchronous>
+            <ResultsMode>first-available</ResultsMode>
+            <RetryCount>0</RetryCount>
+            <RetryInterval>1000</RetryInterval>
+            <MultipleOutputs>off</MultipleOutputs>
+            <IteratorType>XPATH</IteratorType>
+            <Timeout>0</Timeout>
+            <MethodRewriteType>GET</MethodRewriteType>
+            <MethodType>POST</MethodType>
+            <MethodType2>POST</MethodType2>
+        </StylePolicyAction>
+        <StylePolicyRule name="welcomeduartev1_GatewayStylePolicy_request_xml"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <Actions class="StylePolicyAction">welcomeduartev1_GatewayStylePolicy_request_xml_gatewayscript_1</Actions>
+            <Actions class="StylePolicyAction">welcomeduartev1_GatewayStylePolicy_request_xml_xform_0</Actions>
+            <Actions class="StylePolicyAction">welcomeduartev1_GatewayStylePolicy_request_xml_setvar_0</Actions>
+            <Actions class="StylePolicyAction">welcomeduartev1_GatewayStylePolicy_request_xml_results_output_0</Actions>
+            <Direction>request-rule</Direction>
+            <InputFormat>none</InputFormat>
+            <OutputFormat>none</OutputFormat>
+            <NonXMLProcessing>off</NonXMLProcessing>
+            <Unprocessed>off</Unprocessed>
+        </StylePolicyRule>
+        <StylePolicy name="welcomeduartev1_GatewayStylePolicy"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <DefStylesheetForSoap>store:///filter-reject-all.xsl</DefStylesheetForSoap>
+            <DefStylesheetForXsl>store:///identity.xsl</DefStylesheetForXsl>
+            <DefXQueryForJSON>store:///reject-all-json.xq</DefXQueryForJSON>
+            <PolicyMaps>
+                <Match class="Matching">json_request</Match>
+                <Rule class="StylePolicyRule">welcomeduartev1_GatewayStylePolicy_request_json</Rule>
+            </PolicyMaps>
+            <PolicyMaps>
+                <Match class="Matching">request_xml</Match>
+                <Rule class="StylePolicyRule">welcomeduartev1_GatewayStylePolicy_request_xml</Rule>
+            </PolicyMaps>
+        </StylePolicy>
+        <PolicyAttachments name="welcomeduartev1_MPGW"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <EnforcementMode>enforce</EnforcementMode>
+            <PolicyReferences>on</PolicyReferences>
+            <SLAEnforcementMode>allow-if-no-sla</SLAEnforcementMode>
+        </PolicyAttachments>
+        <MultiProtocolGateway name="welcomeduartev1_MPGW"
+            xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:dp="http://www.datapower.com/schemas/management">
+            <mAdminState>enabled</mAdminState>
+            <Priority>normal</Priority>
+            <FrontProtocol class="HTTPSourceProtocolHandler">welcomeduartev1_FSH</FrontProtocol>
+            <XMLManager class="XMLManager">default</XMLManager>
+            <SSLClientConfigType>proxy</SSLClientConfigType>
+            <DefaultParamNamespace>http://www.datapower.com/param/config</DefaultParamNamespace>
+            <QueryParamNamespace>http://www.datapower.com/param/query</QueryParamNamespace>
+            <PropagateURI>on</PropagateURI>
+            <MonitorProcessingPolicy>terminate-at-first-throttle</MonitorProcessingPolicy>
+            <RequestAttachments>strip</RequestAttachments>
+            <ResponseAttachments>strip</ResponseAttachments>
+            <RequestAttachmentsFlowControl>off</RequestAttachmentsFlowControl>
+            <ResponseAttachmentsFlowControl>off</ResponseAttachmentsFlowControl>
+            <RootPartNotFirstAction>process-in-order</RootPartNotFirstAction>
+            <FrontAttachmentFormat>dynamic</FrontAttachmentFormat>
+            <BackAttachmentFormat>dynamic</BackAttachmentFormat>
+            <MIMEFrontHeaders>on</MIMEFrontHeaders>
+            <MIMEBackHeaders>on</MIMEBackHeaders>
+            <StreamOutputToBack>buffer-until-verification</StreamOutputToBack>
+            <StreamOutputToFront>buffer-until-verification</StreamOutputToFront>
+            <MaxMessageSize>0</MaxMessageSize>
+            <GatewayParserLimits>off</GatewayParserLimits>
+            <ParserLimitsElementDepth>512</ParserLimitsElementDepth>
+            <ParserLimitsAttributeCount>128</ParserLimitsAttributeCount>
+            <ParserLimitsMaxNodeSize>33554432</ParserLimitsMaxNodeSize>
+            <ParserLimitsForbidExternalReferences>on</ParserLimitsForbidExternalReferences>
+            <ParserLimitsExternalReferences>forbid</ParserLimitsExternalReferences>
+            <ParserLimitsMaxPrefixes>1024</ParserLimitsMaxPrefixes>
+            <ParserLimitsMaxNamespaces>1024</ParserLimitsMaxNamespaces>
+            <ParserLimitsMaxLocalNames>60000</ParserLimitsMaxLocalNames>
+            <ParserLimitsAttachmentByteCount>2000000000</ParserLimitsAttachmentByteCount>
+            <ParserLimitsAttachmentPackageByteCount>0</ParserLimitsAttachmentPackageByteCount>
+            <DebugMode persisted="false">off</DebugMode>
+            <DebuggerType>internal</DebuggerType>
+            <DebugHistory>25</DebugHistory>
+            <FlowControl>off</FlowControl>
+            <SOAPSchemaURL>store:///schemas/soap-envelope.xsd</SOAPSchemaURL>
+            <FrontTimeout>5</FrontTimeout>
+            <BackTimeout>5</BackTimeout>
+            <FrontPersistentTimeout>180</FrontPersistentTimeout>
+            <BackPersistentTimeout>180</BackPersistentTimeout>
+            <IncludeResponseTypeEncoding>off</IncludeResponseTypeEncoding>
+            <PersistentConnections>on</PersistentConnections>
+            <LoopDetection>off</LoopDetection>
+            <DoHostRewriting>on</DoHostRewriting>
+            <DoChunkedUpload>off</DoChunkedUpload>
+            <ProcessHTTPErrors>on</ProcessHTTPErrors>
+            <HTTPClientIPLabel>X-Client-IP</HTTPClientIPLabel>
+            <HTTPLogCorIDLabel>X-Global-Transaction-ID</HTTPLogCorIDLabel>
+            <InOrderMode>
+                <Request>off</Request>
+                <Backend>off</Backend>
+                <Response>off</Response>
+            </InOrderMode>
+            <WSAMode>sync2sync</WSAMode>
+            <WSARequireAAA>on</WSARequireAAA>
+            <WSAStrip>on</WSAStrip>
+            <WSADefaultReplyTo>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</WSADefaultReplyTo>
+            <WSADefaultFaultTo>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</WSADefaultFaultTo>
+            <WSAForce>off</WSAForce>
+            <WSAGenStyle>sync</WSAGenStyle>
+            <WSAHTTPAsyncResponseCode>204</WSAHTTPAsyncResponseCode>
+            <WSATimeout>120</WSATimeout>
+            <WSRMEnabled>off</WSRMEnabled>
+            <WSRMSequenceExpiration>3600</WSRMSequenceExpiration>
+            <WSRMDestinationAcceptCreateSequence>on</WSRMDestinationAcceptCreateSequence>
+            <WSRMDestinationMaximumSequences>400</WSRMDestinationMaximumSequences>
+            <WSRMDestinationInOrder>off</WSRMDestinationInOrder>
+            <WSRMDestinationMaximumInOrderQueueLength>10</WSRMDestinationMaximumInOrderQueueLength>
+            <WSRMDestinationAcceptOffers>off</WSRMDestinationAcceptOffers>
+            <WSRMFrontForce>off</WSRMFrontForce>
+            <WSRMBackForce>off</WSRMBackForce>
+            <WSRMBackCreateSequence>off</WSRMBackCreateSequence>
+            <WSRMFrontCreateSequence>off</WSRMFrontCreateSequence>
+            <WSRMSourceMakeOffer>off</WSRMSourceMakeOffer>
+            <WSRMUsesSequenceSSL>off</WSRMUsesSequenceSSL>
+            <WSRMSourceMaximumSequences>400</WSRMSourceMaximumSequences>
+            <WSRMSourceRetransmissionInterval>10</WSRMSourceRetransmissionInterval>
+            <WSRMSourceExponentialBackoff>on</WSRMSourceExponentialBackoff>
+            <WSRMSourceMaximumRetransmissions>4</WSRMSourceMaximumRetransmissions>
+            <WSRMSourceMaximumQueueLength>30</WSRMSourceMaximumQueueLength>
+            <WSRMSourceRequestAckCount>1</WSRMSourceRequestAckCount>
+            <WSRMSourceInactivityClose>360</WSRMSourceInactivityClose>
+            <ForcePolicyExec>off</ForcePolicyExec>
+            <RewriteErrors>on</RewriteErrors>
+            <DelayErrors>on</DelayErrors>
+            <DelayErrorsDuration>1000</DelayErrorsDuration>
+            <BackHTTPVersion>HTTP/1.1</BackHTTPVersion>
+            <HTTP2Required>off</HTTP2Required>
+            <RequestType>preprocessed</RequestType>
+            <ResponseType>preprocessed</ResponseType>
+            <FollowRedirects>on</FollowRedirects>
+            <RewriteLocationHeader>off</RewriteLocationHeader>
+            <StylePolicy class="StylePolicy">welcomeduartev1_GatewayStylePolicy</StylePolicy>
+            <Type>dynamic-backend</Type>
+            <AllowCompression>off</AllowCompression>
+            <EnableCompressedPayloadPassthrough>off</EnableCompressedPayloadPassthrough>
+            <AllowCacheControlHeader>off</AllowCacheControlHeader>
+            <PolicyAttachments class="PolicyAttachments">welcomeduartev1_MPGW</PolicyAttachments>
+            <WSMAgentMonitor>off</WSMAgentMonitor>
+            <WSMAgentMonitorPCM>all-messages</WSMAgentMonitorPCM>
+            <ProxyHTTPResponse>off</ProxyHTTPResponse>
+            <TransactionTimeout>0</TransactionTimeout>
+        </MultiProtocolGateway>
+    </configuration>
+    <files>
+        <file name="local:///GatewayScript/duarte.js" src="local/GatewayScript/duarte.js" location="local" hash="Pdxh3kBBSja4l/ZjRUoHFuo5Y9U="/>
+        <file name="local:///GatewayScript/loadXML.js" src="local/GatewayScript/loadXML.js" location="local" hash="ueZGzWyZ3H4RFyNYJVugQfvtSBo="/>
+        <file name="local:///XSLT/duarte.xsl" src="local/XSLT/duarte.xsl" location="local" hash="WIKz+S/vnFEtE89WvmgcFKFjLaA="/>
+        <file name="webgui:///clixform.xsl" src="dp-aux/clixform.xsl" location="dp-aux" internal="true" hash="Hv9aV/AeyMbCnx6Pe9k8gDN0BYc="/>
+        <file name="webgui:///SchemaUtil.xsl" src="dp-aux/SchemaUtil.xsl" location="dp-aux" internal="true" hash="lDu5pgpeu28YNaWBHTh+kiURBQs="/>
+        <file name="webgui:///management.xsl" src="dp-aux/management.xsl" location="dp-aux" internal="true" hash="pi0c46mGrlbqTpsWjG3QUxFOCYU="/>
+        <file name="webgui:///map-dmz.xsl" src="dp-aux/map-dmz.xsl" location="dp-aux" internal="true" hash="S8LbpfukTeInHK2d6DnQfdiZmd4="/>
+        <file name="webgui:///drMgmt.xml" src="dp-aux/drMgmt.xml" location="dp-aux" internal="true" hash="heGRT6jdhpj0hwNxLPYvCpilQw4="/>
+        <file name="webgui:///basetypes.xml" src="dp-aux/basetypes.xml" location="dp-aux" internal="true" hash="HrLsg2FhC6fPlGYI25NijeP828E="/>
+    </files>
+</datapower-configuration>
